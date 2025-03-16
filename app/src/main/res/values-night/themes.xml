@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.HRBand"
+        parent="@style/Theme.base">
+        <item name="android:background">#000</item>
+        <item name="android:textColorTertiary">#ddd</item>
+        <item name="android:foregroundTint">#fff</item>
+
+    </style>
+
+</resources>

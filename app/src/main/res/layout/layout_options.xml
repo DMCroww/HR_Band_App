@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/optionsHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Options"
+        android:textColor="@color/primary"
+        android:textSize="48sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/generalHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="General:"
+        android:textColor="@color/primary"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/optionsHeader" />
+
+    <Switch
+        android:id="@+id/option_reconnect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:checked="false"
+        android:switchMinWidth="48dp"
+        android:text="Auto reconnect last device"
+        android:textColor="@color/secondary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/optionsHeader"
+        app:layout_constraintTop_toBottomOf="@+id/generalHeader"
+        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/addrHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="WS server url:"
+        android:textColor="@color/secondary"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/option_reconnect"
+        app:layout_constraintTop_toBottomOf="@+id/option_reconnect" />
+
+    <EditText
+        android:id="@+id/option_wsUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:background="@color/inputBackground"
+        android:inputType="text|textUri|textNoSuggestions"
+        android:padding="8dp"
+        android:textColor="@color/secondary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/option_reconnect"
+        app:layout_constraintStart_toStartOf="@id/addrHeader"
+        app:layout_constraintTop_toBottomOf="@id/addrHeader" />
+
+    <TextView
+        android:id="@+id/securityHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Security:"
+        android:textColor="@color/secondary"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@id/generalHeader"
+        app:layout_constraintTop_toBottomOf="@id/option_wsUrl" />
+
+    <TextView
+        android:id="@+id/securityInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Needed for connecting to 'vpn.dmcroww.tech'\nLeave blank if connecting to other server"
+        android:textColor="@color/secondary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/securityHeader"
+        app:layout_constraintTop_toBottomOf="@+id/securityHeader" />
+
+    <TextView
+        android:id="@+id/channelHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Channel name:"
+        android:textColor="@color/secondary"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/securityHeader"
+        app:layout_constraintTop_toBottomOf="@id/securityInfo" />
+
+    <EditText
+        android:id="@+id/option_channel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/inputBackground"
+        android:inputType="text|textUri|textNoSuggestions"
+        android:padding="8dp"
+        android:textColor="@color/secondary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/option_wsUrl"
+        app:layout_constraintStart_toStartOf="@id/option_wsUrl"
+        app:layout_constraintTop_toBottomOf="@id/channelHeader" />
+
+    <TextView
+        android:id="@+id/codeHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Private code:"
+        android:textColor="@color/secondary"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/channelHeader"
+        app:layout_constraintTop_toBottomOf="@id/option_channel" />
+
+    <EditText
+        android:id="@+id/option_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/inputBackground"
+        android:inputType="text|textUri|textNoSuggestions"
+        android:padding="8dp"
+        android:textColor="@color/secondary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/option_channel"
+        app:layout_constraintStart_toStartOf="@id/option_wsUrl"
+        app:layout_constraintTop_toBottomOf="@id/codeHeader" />
+
+    <Button
+        android:id="@+id/button_op_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Save settings"
+        android:textColor="@color/secondary"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/option_code" />
+</androidx.constraintlayout.widget.ConstraintLayout>

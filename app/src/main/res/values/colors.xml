@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#000</color>
+    <color name="iconBck">#FFF</color>
+    <color name="secondary">#222</color>
+    <color name="inputBackground">#ddd</color>
+</resources>

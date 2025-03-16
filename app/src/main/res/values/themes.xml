@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.base"
+        parent="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:colorButtonNormal">@color/inputBackground</item>
+        <item name="android:buttonCornerRadius">20dp</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:textColorPrimary">@color/primary</item>
+        <item name="android:textColorSecondary">@color/secondary</item>
+    </style>
+
+    <style name="Theme.HRBand"
+        parent="@style/Theme.base">
+        <item name="android:background">#FFF</item>
+        <item name="android:textColorTertiary">#111</item>
+        <item name="android:foregroundTint">#222</item>
+    </style>
+
+</resources>
