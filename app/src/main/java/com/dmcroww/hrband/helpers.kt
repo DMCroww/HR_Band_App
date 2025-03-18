@@ -26,7 +26,6 @@ class WSlink(private val service: BleService) {
 	private var channel: String = ""
 	private var code: String = ""
 	private val id = "phoneclient"
-	private val to = listOf("/heartrate", "/heartrate/text", "/heartrate/graph")
 
 	fun connect(ip: String, channelName: String, authCode: String) {
 		address = "ws://$ip"
@@ -95,11 +94,9 @@ class WSlink(private val service: BleService) {
 	}
 
 	fun sendWS(value: Any? = true, type: String = "heartrate") {
-		to.forEach {
-			val json = JSONObject().put("id", id).put("to", it).put("type", type).put("data", value).put("channel", channel).put("code", code)
+			val json = JSONObject().put("id", id).put("to", "server").put("type", type).put("data", value).put("channel", channel).put("code", code)
 
 			webSocket?.send(json.toString())
-		}
 	}
 
 	fun replyWS(to: String, value: Any? = true, type: String = "heartrate") {
