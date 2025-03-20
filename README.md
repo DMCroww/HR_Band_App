@@ -14,7 +14,7 @@ Got ideas for a new feature or a quirky improvement? Create a feature request.
 
 ## License
 
-This project is licensed under the MIT License. Feel free to remix, reuse, and rock on—as long as you give credit where it's due.
+This project is licensed under the GNU GENERAL PUBLIC LICENSE. Feel free to remix, reuse, and rock on—as long as you give credit where it's due.
 
 ## Contact
 
